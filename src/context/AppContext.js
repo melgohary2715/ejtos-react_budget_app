@@ -43,6 +43,7 @@ export const AppReducer = (state, action) => {
                     ...state,
                     expenses: [...red_expenses],
                 };
+            
             case 'DELETE_EXPENSE':
             action.type = "DONE";
             state.expenses.map((currentExp)=> {
@@ -57,6 +58,23 @@ export const AppReducer = (state, action) => {
                 ...state,
                 budget
             };
+            case 'CHANGE_EXPENSE':
+            const updatedExpenses = state.expenses.map(expense => {
+                if (expense.id === action.payload.id) {
+                    let newCost = expense.cost + action.payload.cost;
+                    // Prevent the cost from going negative
+                    newCost = newCost >= 0 ? newCost : 0;
+                    return { ...expense, cost: newCost };
+                }
+                return expense;
+            });
+            return {
+                ...state,
+                expenses: updatedExpenses,
+            };
+
+        // ... other cases ...
+
         case 'SET_BUDGET':
             action.type = "DONE";
             state.budget = action.payload;
@@ -92,8 +110,7 @@ const initialState = {
 // 2. Creates the context this is the thing our components import and use to get the state
 export const AppContext = createContext();
 
-// 3. Provider component - wraps the components we want to give access to the state
-// Accepts the children, which are the nested(wrapped) components
+// 3. Provider component - wraps the components we want to give access to the state// Accepts the children, which are the nested(wrapped) components
 export const AppProvider = (props) => {
     // 4. Sets up the app state. takes a reducer, and an initial state
     const [state, dispatch] = useReducer(AppReducer, initialState);

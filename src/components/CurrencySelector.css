@@ -1,0 +1,9 @@
+/* Add this inside your CSS file */
+#currency-select {
+  background-color: #dff0d8; /* Light green background */
+  border: 1px solid #d6e9c6; /* Green border */
+  color: #3c763d; /* Dark green text */
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 4px;
+}

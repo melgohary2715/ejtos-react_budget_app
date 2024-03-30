@@ -1,0 +1,41 @@
+/* Budget.css */
+.input-group {
+  margin-bottom: 1rem; /* Spacing below the input group */
+}
+
+.input-group .form-control, .input-group .input-group-text, .input-group .btn {
+  height: 38px; /* Adjust the height of your inputs and buttons */
+  padding: 6px 12px; /* Padding for text inside inputs and buttons */
+  border: 1px solid #ced4da; /* Border color */
+}
+
+.input-group .form-control {
+  border-radius: 0.25rem 0 0 0.25rem; /* Round corners on the left side of the text box */
+}
+
+.input-group .input-group-prepend .input-group-text {
+  border-right: none; /* Remove the right border on the addon to make it seem part of the input */
+  background-color: #ffffff; /* Background color for the input group text */
+  border-radius: 0.25rem 0 0 0.25rem; /* Round only the left side corners */
+}
+
+.input-group .input-group-append .btn {
+  border-radius: 0 0.25rem 0.25rem 0; /* Round corners on the right side of the buttons */
+  border-left: none; /* Remove the left border on the button to make it seem part of the input */
+  background-color: #f8f9fa; /* Slightly off-white background, adjust as needed */
+  color: #495057; /* Button text color */
+}
+
+.input-group .input-group-append .btn:hover {
+  background-color: #e2e6ea; /* Slightly darker background on hover */
+}
+
+/* Specific styles for the Reset button to differentiate it */
+.input-group .input-group-append .btn-outline-secondary {
+  background-color: #ffffff; /* White background for the Reset button */
+  color: #6c757d; /* Reset button text color */
+}
+
+.input-group .input-group-append .btn-outline-secondary:hover {
+  background-color: #f8f9fa; /* Slightly off-white background on hover */
+}

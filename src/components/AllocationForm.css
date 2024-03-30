@@ -1,0 +1,50 @@
+/* AllocationForm.css */
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust the space between elements as needed */
+}
+
+.input-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.input-group-prepend .input-group-text, .input-group-append .btn {
+  border-radius: 0; /* Square edges */
+  border: 1px solid #ccc; /* Light grey border */
+}
+
+.input-group-prepend .input-group-text {
+  border-right: 0; /* Remove the right border where it meets the input */
+}
+
+.input-group .form-control {
+  border-left: 0; /* Remove the left border where it meets the span */
+}
+
+/* Customize the button appearance */
+.input-group-append .btn {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+}
+
+/* Restyle the selects to match */
+.custom-select {
+  border-radius: 0; /* Square edges for the select elements */
+}
+
+.input-group .form-control {
+  height: auto; /* Adjust to 'auto' or set a specific height if preferred */
+  width: auto;
+  padding: 10px; /* Increase padding to make the input taller */
+}
+
+/* Optionally, if you also want to increase the size of the dropdowns and button to match */
+.custom-select, .input-group-text, .btn {
+  height: auto; /* Adjust to 'auto' or set a specific height if preferred */
+  padding: 10px; /* Match padding to keep elements aligned */
+}
+
+/* You may need additional adjustments based on the exact look you're going for. */
+
